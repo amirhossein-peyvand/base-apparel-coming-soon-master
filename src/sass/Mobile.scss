@@ -1,0 +1,112 @@
+@import "./colors.scss";
+
+.mobile {
+  min-height: 100vh;
+
+  .header {
+    padding: 2rem;
+
+    img {
+      width: 10rem;
+    }
+  }
+
+  .mainContent {
+    .heroImageContainer {
+      img {
+        width: 100%;
+      }
+    }
+
+    .contentContainer {
+      padding: 3.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      align-items: center;
+      text-align: center;
+
+      .title {
+        font-size: 3.5rem;
+        color: $dark-grayish-red;
+        text-transform: uppercase;
+        word-spacing: 1px;
+        letter-spacing: 4px;
+        line-height: 1.2;
+        font-weight: 400;
+
+        span {
+          color: $desaturated-red;
+          font-weight: 300;
+        }
+      }
+
+      .desc {
+        font-size: 1.3rem;
+        letter-spacing: 0.3px;
+        word-spacing: 2px;
+        line-height: 1.5;
+        color: $desaturated-red;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    .header {
+      img {
+        width: 17rem;
+      }
+    }
+
+    .mainContent {
+      .heroImageContainer {
+        img {
+          width: 100%;
+          max-height: 55vh;
+          object-fit: cover;
+        }
+      }
+
+      .contentContainer {
+        .desc {
+          font-size: 2.2rem;
+        }
+
+        .formContainer {
+          width: 60%;
+
+          form {
+            border-radius: 35px;
+            input {
+              border-radius: 35px;
+              font-size: 2rem;
+              padding: 2rem;
+            }
+
+            input::placeholder {
+              font-size: 1.4rem;
+            }
+
+            .errorIcon {
+              top: 35%;
+            }
+
+            button {
+              top: 2%;
+              padding: 2.2rem;
+              width: 8.5rem;
+              border-radius: 35px;
+            }
+          }
+
+          .err {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
